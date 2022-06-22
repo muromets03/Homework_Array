@@ -95,21 +95,21 @@ function hasElem(arr_numbers_2, string) {
  return arr_numbers_2.includes(string)
 } 
 
-console.log(hasElem(arr_numbers_2, "apple"));
+console.log(hasElem([1,2,3], "apple"));
 
 //2
 const arr_numbers = [1, 2, 3, 4, 5];
 
 function chekNumbers(arr, elem) {
   for (var i = 0; i < arr.length; i++) {
-    if (arr[i] === elem) {
+    if (arr[i] === elem ) {
       return true;
     }
   }
   return false;
 }
 
-console.log(chekNumbers(arr_numbers, 5));
+console.log(chekNumbers(arr_numbers, 4));
 
 //3
 
@@ -144,12 +144,16 @@ console.log(rand(5, 33));
 //5
 
 
-function averageFun (nums=[12, 15, 20, 25, 59, 79]) {
+function averageFun (nums=[]) {
+  if(nums.length===0){
+    return false;
+  }
    let sum=0
   for (let i=0; i<nums.length; i++){
    sum+=nums[i]};
    {
     return sum/nums.length;
+   
   }
 
 } console.log(averageFun())
